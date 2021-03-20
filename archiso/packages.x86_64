@@ -249,29 +249,29 @@ poppler-qt5
 #darktable
 #deadbeef
 dmenu
-#evolution
+evolution
 feh
-firefox
+#firefox
 #flashplugin
 #galculator
 #geany
 #gimp
 gmrun
-gsimplecal
+#gsimplecal
 #guvcview
-imagemagick
+#imagemagick
 #inkscape
 #libreoffice-fresh
 #lshw
-#meld
+meld
 nitrogen
 numlockx
 #pragha
 #qbittorrent
-scrot
+#scrot
 #simplescreenrecorder
 termite
-variety
+#variety
 #vlc
 
 ###conky
@@ -307,7 +307,7 @@ kvantum-qt5
 
 ###utilities
 arandr
-asciinema
+#asciinema
 bash-completion
 #baobab
 #catfish
@@ -387,7 +387,7 @@ xapps
 xdo
 xdotool
 xdg-desktop-portal-gtk
-#youtube-dl
+youtube-dl
 zenity
 zsh
 zsh-completions
@@ -459,9 +459,9 @@ python-pyparted
 #sublime-text-dev
 #the_platinum_searcher-bin
 tmux
-trizen
-urxvt-perls
-urxvt-resize-font-git
+#trizen
+#urxvt-perls
+#urxvt-resize-font-git
 #wttr
 yad
 #yakuake
@@ -490,7 +490,7 @@ arcolinux-conky-collection-git
 #arcolinux-docs-git
 #arcolinux-faces-git
 arcolinux-fonts-git
-#arcolinux-geany-git
+#arcolinux-geany-git #requires webk
 arcolinux-grub-theme-vimix-git
 arcolinux-hblock-git
 arcolinux-keyring
@@ -534,7 +534,7 @@ arcolinux-termite-themes-git
 #arcolinux-tint2-git
 #arcolinux-tint2-themes-git
 arcolinux-tweak-tool-git
-arcolinux-variety-git
+#arcolinux-variety-git
 arcolinux-wallpapers-git
 #arcolinux-wallpapers-lxqt-dual-git
 #arcolinux-xfce4-panel-profiles-git
@@ -799,7 +799,7 @@ xfce4-panel
 xfce4-power-manager
 #xfce4-session
 xfce4-settings
-xfce4-terminal
+#xfce4-terminal
 xfconf
 #xfdesktop
 xfwm4
@@ -809,8 +809,8 @@ xfwm4
 # https://www.archlinux.org/groups/x86_64/xfce4-goodies/
 #mousepad
 #orage
-#parole
-ristretto
+parole
+#ristretto
 thunar-archive-plugin
 thunar-media-tags-plugin
 #xfburn
@@ -858,3 +858,6 @@ xfce4-taskmanager
 #desktop specific dwm
 sxhkd
 autorandr
+
+mpv
+
