@@ -29,12 +29,12 @@ echo
 	desktop="dwm"
 	dmDesktop="dwm"
 
-	arcolinuxVersion='v21.03.11'
+	arcolinuxVersion='v21.05.2'
 
 	isoLabel='arcolinuxb-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 51-1"
+	archisoRequiredVersion="archiso 52-1"
 	buildFolder=$HOME"/arcolinuxb-build"
 	outFolder=$HOME"/ArcoLinuxB-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
@@ -196,8 +196,8 @@ echo
 	#Setting variables
 
 	#profiledef.sh
-	oldname1='iso_name=arcolinux'
-	newname1='iso_name=arcolinuxb-'$desktop
+	oldname1='iso_name="arcolinux'
+	newname1='iso_name="arcolinuxb-'$desktop
 
 	oldname2='iso_label="arcolinux'
 	newname2='iso_label="arcolinuxb-'$desktop
