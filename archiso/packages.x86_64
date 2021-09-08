@@ -3,52 +3,59 @@
 #####################################################################
 
 ###archiso
+alsa-utils
 amd-ucode
 arch-install-scripts
+#archinstall
 #b43-fwcutter
 base
 bind-tools
+#brltty
 broadcom-wl
 btrfs-progs
 clonezilla
+#cloud-init
 crda
-darkhttpd
+cryptsetup
+#darkhttpd
 ddrescue
 dhclient
 #dhcpcd
-dialog
 diffutils
 dmraid
 dnsmasq
-dnsutils
 dosfstools
+e2fsprogs
 edk2-shell
 efibootmgr
+#espeakup
 ethtool
 exfatprogs
 f2fs-tools
 fatresize
 fsarchiver
 gnu-netcat
+gpart
 gpm
 gptfdisk
 #grml-zsh-config
-grub
-haveged
 hdparm
 intel-ucode
 ipw2100-fw
 ipw2200-fw
 irssi
+#iw
 #iwd
 jfsutils
 #kitty-terminfo
+less
 #lftp
+libfido2
+libusb-compat
 linux
 linux-atm
 linux-firmware
-linux-headers
-logrotate
+#livecd-sounds
 lsscsi
 lvm2
 #lynx
@@ -60,6 +67,7 @@ memtest86+
 mkinitcpio
 mkinitcpio-archiso
 mkinitcpio-nfs-utils
+modemmanager
 mtools
 nano
 nbd
@@ -69,37 +77,43 @@ nilfs-utils
 #nmap
 ntfs-3g
 nvme-cli
-ntp
 openconnect
 openssh
 openvpn
 partclone
 parted
 partimage
+pcsclite
 ppp
 pptpclient
+#pv
+qemu-guest-agent
 reflector
 reiserfsprogs
 rp-pppoe
 rsync
-#rxvt-unicode-terminfo
+rxvt-unicode-terminfo
+screen
 sdparm
 sg3_utils
 smartmontools
 sof-firmware
+squashfs-tools
 sudo
 syslinux
 #systemd-resolvconf
 tcpdump
 terminus-font
-#termite-terminfo
 testdisk
+tmux
+tpm2-tss
+udftools
 usb_modeswitch
 usbmuxd
 usbutils
 vim
+#virtualbox-guest-utils-nox
 vpnc
-wget
 wireless-regdb
 wireless_tools
 wpa_supplicant
@@ -107,6 +121,14 @@ wvdial
 xfsprogs
 xl2tpd
 
+###archiso-extra
+dialog
+dnsutils
+grub
+linux-headers
+logrotate
+ntp
+wget
 
 ###xorg
 xorg-server
@@ -123,16 +145,16 @@ xf86-input-libinput
 #xf86-input-synaptics
 xf86-input-vmmouse
 xf86-input-void
-#xf86-video-amdgpu
-#xf86-video-ati
+xf86-video-amdgpu
+xf86-video-ati
 #xf86-video-dummy
-#xf86-video-fbdev
+xf86-video-fbdev
 #xf86-video-intel
-#xf86-video-nouveau
-#xf86-video-openchrome
+xf86-video-nouveau
+xf86-video-openchrome
 #xf86-video-qxl
-#xf86-video-vesa
-#xf86-video-vmware
+xf86-video-vesa
+xf86-video-vmware
 #xf86-video-voodoo
 #xf86-video-sisusb
 mesa
@@ -141,10 +163,9 @@ mesa
 #bumblebee
 #optimus-manager
 #optimus-manager-qt
-#nvidia
-#nvidia-utils
-#nvidia-390xx
-#nvidia-390xx-utils
+nvidia
+nvidia-utils
+nvidia-settings
 #libva-intel-driver
 #libva-vdpau-driver
 #mesa-demos
@@ -190,7 +211,6 @@ blueberry
 bluez
 bluez-libs
 bluez-utils
-#bluez-firmware
 pulseaudio-bluetooth
 
 ###network
@@ -259,8 +279,8 @@ feh
 #galculator
 #geany
 #gimp
-gmrun
-#gsimplecal
+#gmrun
+gsimplecal
 #guvcview
 #imagemagick
 #inkscape
@@ -285,7 +305,7 @@ jq
 #xcursor-simpleandsoft
 
 ###fonts
-adobe-source-sans-pro-fonts
+adobe-source-sans-fonts
 awesome-terminal-fonts
 noto-fonts
 #ttf-bitstream-vera
@@ -295,6 +315,7 @@ ttf-hack
 #ttf-inconsolata
 #ttf-liberation
 ttf-roboto
+ttf-roboto-mono
 ttf-ubuntu-font-family
 
 ###icons
@@ -305,6 +326,7 @@ ttf-ubuntu-font-family
 ###themes
 #adapta-gtk-theme
 arc-gtk-theme
+arc-darkest-theme-git
 kvantum-qt5
 #openbox-arc-git
 
@@ -368,14 +390,15 @@ qt5ct
 qt5-webkit
 #powertop
 #redshift
+ripgrep
 rofi
 rxvt-unicode
 #simple-scan
 #shotwell
-speedtest-cli
-#timeshift
+speedtest-cli-git
 #telegram-desktop
-#tlp
+#timeshift
+tlp
 tree
 #ufw
 #gufw
@@ -386,7 +409,7 @@ unzip
 w3m
 webkit2gtk
 wmctrl
-xapps
+xapp
 xdo
 xdotool
 xdg-desktop-portal-gtk
@@ -437,6 +460,7 @@ surfn-icons-git
 mkinitcpio-openswap
 
 ###utilities-repo
+alacritty
 appstream
 archiso
 conky-lua-archers
@@ -452,6 +476,7 @@ neofetch
 #numix-gtk-theme-git
 pamac-all
 #pamac-aur
+paru-bin
 #peek
 #pulseaudio-equalizer-ladspa
 #pyakm
@@ -459,12 +484,12 @@ python-pyparted
 #python-pywal
 #scour
 #screenkey-git
-#sublime-text-dev
+#sublime-text-4
 #the_platinum_searcher-bin
-tmux
 #trizen
-#urxvt-perls
-#urxvt-resize-font-git
+urxvt-fullscreen
+urxvt-perls
+urxvt-resize-font-git
 #wttr
 yad
 #yakuake
@@ -483,6 +508,7 @@ yay-bin
 #                           ARCOLINUX FOLDER
 ###########################################################################
 
+arcolinux-alacritty-git
 #arcolinux-arc-kde
 #arcolinux-arc-themes-git
 arcolinux-bin-git
@@ -491,10 +517,16 @@ arcolinux-conky-collection-git
 #arcolinux-conky-collection-plasma-git
 #arcolinux-cron-git
 #arcolinux-docs-git
+arcolinux-desktop-trasher-git
 #arcolinux-faces-git
 arcolinux-fonts-git
 #arcolinux-geany-git #requires webk
 arcolinux-grub-theme-vimix-git
+arcolinux-gtk3-sardi-arc-git
+#arcolinux-gtk3-surfn-arc-git
+#arcolinux-gtk3-surfn-arc-breeze-git
+#arcolinux-gtk3-surfn-plasma-dark-git
+#arcolinux-guake-autostart-git
 arcolinux-hblock-git
 arcolinux-keyring
 arcolinux-kvantum-git
@@ -505,10 +537,11 @@ arcolinux-local-applications-git
 #arcolinux-local-applications-plasma-hide-git
 arcolinux-local-xfce4-git
 #arcolinux-logo-git
-arcolinux-logout-git
-arcolinux-logout-themes-git
+#arcolinux-logout-git
+#arcolinux-logout-themes-git
 #arcolinux-lxqt-applications-add-git
 #arcolinux-lxqt-applications-hide-git
+arcolinux-meta-logout
 arcolinux-mirrorlist-git
 arcolinux-neofetch-git
 arcolinux-nitrogen-git
@@ -518,6 +551,7 @@ arcolinux-nitrogen-git
 #arcolinux-obmenu-generator-minimal-git
 #arcolinux-obmenu-generator-xtended-git
 #arcolinux-openbox-themes-git
+arcolinux-paru-git
 arcolinux-pipemenus-git
 #arcolinux-plank-git
 #arcolinux-plank-themes-git
@@ -531,16 +565,19 @@ arcolinux-root-git
 #arcolinux-slim
 #arcolinux-slimlock-themes-git
 arcolinux-system-config-git
+#arcolinux-system-config-dev-git
 #arcolinuxd-system-config-git
 arcolinux-systemd-services-git
 arcolinux-termite-themes-git
 #arcolinux-tint2-git
 #arcolinux-tint2-themes-git
 arcolinux-tweak-tool-git
-#arcolinux-variety-git
+arcolinux-variety-git
+arcolinux-variety-autostart-git
+arcolinux-volumeicon-git
 arcolinux-wallpapers-git
 #arcolinux-wallpapers-lxqt-dual-git
-#arcolinux-xfce4-panel-profiles-git
+#arcolinux-xfce-panel-profiles-git
 #arcolinux-xmobar-git
 arcolinux-zsh-git
 
@@ -552,6 +589,7 @@ arcolinux-zsh-git
 #arcolinux-bspwm-git
 #arcolinux-budgie-git
 #arcolinux-cinnamon-git
+#arcolinux-cutefish-git
 #arcolinux-cwm-git
 #arcolinux-deepin-git
 arcolinux-dwm-git
@@ -588,9 +626,10 @@ arcolinux-config-all-desktops-git
 #arcolinux-config-bspwm-git
 #arcolinux-config-budgie-git
 #arcolinux-config-cinnamon-git
+#arcolinux-config-cutefish-git
 #arcolinux-config-cwm-git
 #arcolinux-config-deepin-git
-arcolinux-config-dwm-git
+#arcolinux-config-dwm-git
 #arcolinux-config-enlightenment-git
 #arcolinux-config-fvwm3-git
 #arcolinux-config-git
@@ -616,14 +655,16 @@ arcolinux-config-dwm-git
 #                           ARCOLINUX DCONF FOLDER
 ###########################################################################
 
+arcolinux-dconf-all-desktops-git
 #arcolinux-awesome-dconf-git
 #arcolinux-bspwm-dconf-git
 #arcolinux-budgie-dconf-git
 #arcolinux-cinnamon-dconf-git
+#arcolinux-cutefish-dconf-git
 #arcolinux-cwm-dconf-git
 #arcolinux-dconf-git
 #arcolinux-deepin-dconf-git
-arcolinux-dwm-dconf-git
+#arcolinux-dwm-dconf-git
 #arcolinux-enlightenment-dconf-git
 #arcolinux-fvwm3-dconf-git
 #arcolinux-gnome-dconf-git
@@ -653,11 +694,12 @@ arco-calamares
 #arco-calamares-git
 #arco-calamares-next
 arcolinux-system-installation-git
-#arcolinux-config-live-session-git
+#arcolinuxd-config-live-session-git
 arcolinux-welcome-app-git
+#arcolinuxd-welcome-app-git
 #arcolinux-welcome-app-dev-git
 #arcolinux-welcome-app-deepin-git
-arcolinux-calamares-tool-git
+#arcolinux-calamares-tool-git
 #arcolinux-calamares-tool-dev-git
 
 ###########################################################################
@@ -692,6 +734,7 @@ adobe-source-han-sans-cn-fonts
 #arcob-calamares-config-budgie-git
 #arcob-calamares-config-cinnamon-git
 #arcob-calamares-config-cwm-git
+#arcob-calamares-config-cutefish-git
 #arcob-calamares-config-deepin-git
 arcob-calamares-config-dwm-git
 #arcob-calamares-config-enlightenment-git
@@ -712,11 +755,13 @@ arcob-calamares-config-dwm-git
 #arcob-calamares-config-xfce-git
 #arcob-calamares-config-xmonad-git
 #arcob-calamares-config-xtended-git
-#arco-calamares-config-git
-#arco-calamares-config-git-git
-#arco-calamares-config-comp-git
-#arco-calamares-config-dev-git
-#arco-calamares-config-next-git
+#arco-calamares-config-b-git
+#arco-calamares-config-xl-git
+#arco-calamares-config-xl-git-git
+#arco-calamares-config-xl-dev-git
+#arco-calamares-config-xs-git
+#arco-calamares-config-xs-lts-git
+#arco-calamares-config-xl-next-git
 #arcod-calamares-config-git
 #arcod-calamares-config-git-git
 #arcod-calamares-config-comp-git
@@ -733,7 +778,7 @@ accountsservice
 ##sddm
 sddm
 arcolinux-sddm-sugar-candy-git
-sddm-config-editor-git
+#sddm-config-editor-git
 
 ###########################################################################
 #                         PICOM OR COMPTON

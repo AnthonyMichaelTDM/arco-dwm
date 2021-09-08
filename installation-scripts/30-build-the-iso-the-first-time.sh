@@ -29,12 +29,12 @@ echo
 	desktop="dwm"
 	dmDesktop="dwm"
 
-	arcolinuxVersion='v21.05.2'
+	arcolinuxVersion='v21.09.11'
 
 	isoLabel='arcolinuxb-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 52-1"
+	archisoRequiredVersion="archiso 58-1"
 	buildFolder=$HOME"/arcolinuxb-build"
 	outFolder=$HOME"/ArcoLinuxB-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
@@ -63,7 +63,6 @@ echo
 	echo "or update your system"
 	echo "###################################################################################################"
 	tput sgr0
-	exit 1
 	fi
 
 echo
@@ -144,8 +143,16 @@ echo
 	echo
 	echo "Git clone the latest ArcoLinux-iso from github"
 	echo
-	git clone https://github.com/arcolinux/arcolinux-iso ../work
-
+	git clone https://github.com/arcolinux/arcolinuxl-iso ../work
+	echo
+	echo "Adding the content of the /personal folder"
+	echo
+	cp -rf ../personal/ ../work/archiso/airootfs/
+	if test -f ../work/archiso/airootfs/personal/.gitkeep ; then
+		echo ".gitkeep is now removed"
+		echo
+		rm ../work/archiso/airootfs/personal/.gitkeep
+    fi
 	echo "Copying the Archiso folder to build work"
 	echo
 	mkdir $buildFolder
@@ -196,17 +203,17 @@ echo
 	#Setting variables
 
 	#profiledef.sh
-	oldname1='iso_name="arcolinux'
+	oldname1='iso_name="arcolinuxl'
 	newname1='iso_name="arcolinuxb-'$desktop
 
-	oldname2='iso_label="arcolinux'
+	oldname2='iso_label="arcolinuxl'
 	newname2='iso_label="arcolinuxb-'$desktop
 
-	oldname3='ArcoLinux'
+	oldname3='ArcoLinuxL'
 	newname3='ArcoLinuxB-'$desktop
 
 	#hostname
-	oldname4='ArcoLinux'
+	oldname4='ArcoLinuxL'
 	newname4='ArcoLinuxB-'$desktop
 
 	#sddm.conf user-session
@@ -219,8 +226,16 @@ echo
 	sed -i 's/'$oldname2'/'$newname2'/g' $buildFolder/archiso/profiledef.sh
 	sed -i 's/'$oldname3'/'$newname3'/g' $buildFolder/archiso/airootfs/etc/dev-rel
 	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/airootfs/etc/hostname
-	sed -i 's/'$oldname5'/'$newname5'/g' $buildFolder/archiso/airootfs/etc/sddm.conf
-
+	sed -i 's/'$oldname5'/'$newname5'/g' $buildFolder/archiso/airootfs/etc/sddm.conf.d/kde_settings.conf
+	#bios
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/syslinux/archiso_sys-linux.cfg
+	#uefi
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/1-archiso-x86_64-linux.conf
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/2-archiso-x86_64-linux-no-nouveau.conf
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/3-nvidianouveau.conf
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/4-nvidianonouveau.conf
+	sed -i 's/'$oldname4'/'$newname4'/g' $buildFolder/archiso/efiboot/loader/entries/5-nomodeset.conf
+	
 	echo "Adding time to /etc/dev-rel"
 	date_build=$(date -d now)
 	echo "Iso build on : "$date_build
