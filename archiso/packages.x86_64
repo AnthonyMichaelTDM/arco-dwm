@@ -272,7 +272,7 @@ poppler-qt5
 #darktable
 #deadbeef
 dmenu
-evolution
+#evolution
 feh
 #firefox
 #flashplugin
@@ -280,25 +280,25 @@ feh
 #geany
 #gimp
 #gmrun
-gsimplecal
+#gsimplecal
 #guvcview
-#imagemagick
+imagemagick
 #inkscape
 #libreoffice-fresh
 #lshw
 meld
-nitrogen
+#nitrogen
 numlockx
 #pragha
 #qbittorrent
-#scrot
+scrot
 #simplescreenrecorder
 termite
 #variety
 #vlc
 
 ###conky
-jq
+#jq
 #lm_sensors
 
 ###cursors
@@ -338,7 +338,7 @@ bash-completion
 #catfish
 #cronie
 dconf-editor
-dex
+#dex
 #discord
 #dmidecode
 duf-bin
@@ -367,7 +367,7 @@ hw-probe
 #hyphen
 #hyphen-en
 #grsync
-intltool
+#intltool
 iw
 jsoncpp
 libmtp
@@ -378,7 +378,7 @@ mlocate
 oh-my-zsh-git
 p7zip
 #plank
-playerctl
+#playerctl
 polkit
 polkit-gnome
 #python2-dbus
@@ -387,11 +387,11 @@ python2-xdg
 qt5ct
 #qt5-styleplugins
 #qt5-tools
-qt5-webkit
+#qt5-webkit
 #powertop
 #redshift
 ripgrep
-rofi
+#rofi
 rxvt-unicode
 #simple-scan
 #shotwell
@@ -410,8 +410,8 @@ w3m
 webkit2gtk
 wmctrl
 xapp
-xdo
-xdotool
+#xdo
+#xdotool
 xdg-desktop-portal-gtk
 youtube-dl
 zenity
@@ -461,7 +461,7 @@ mkinitcpio-openswap
 
 ###utilities-repo
 alacritty
-appstream
+#appstream
 archiso
 conky-lua-archers
 downgrade
@@ -513,7 +513,7 @@ arcolinux-alacritty-git
 #arcolinux-arc-themes-git
 arcolinux-bin-git
 #arcolinux-common-git
-arcolinux-conky-collection-git
+#arcolinux-conky-collection-git
 #arcolinux-conky-collection-plasma-git
 #arcolinux-cron-git
 #arcolinux-docs-git
@@ -544,7 +544,7 @@ arcolinux-local-xfce4-git
 arcolinux-meta-logout
 arcolinux-mirrorlist-git
 arcolinux-neofetch-git
-arcolinux-nitrogen-git
+#arcolinux-nitrogen-git
 #arcolinux-oblogout
 #arcolinux-oblogout-themes-git
 #arcolinux-obmenu-generator-git
@@ -559,8 +559,8 @@ arcolinux-pipemenus-git
 #arcolinux-polybar-git
 arcolinux-qt5-git
 #arcolinux-qt5-plasma-git
-arcolinux-rofi-git
-arcolinux-rofi-themes-git
+#arcolinux-rofi-git
+#arcolinux-rofi-themes-git
 arcolinux-root-git
 #arcolinux-slim
 #arcolinux-slimlock-themes-git
@@ -568,7 +568,7 @@ arcolinux-system-config-git
 #arcolinux-system-config-dev-git
 #arcolinuxd-system-config-git
 arcolinux-systemd-services-git
-arcolinux-termite-themes-git
+#arcolinux-termite-themes-git
 #arcolinux-tint2-git
 #arcolinux-tint2-themes-git
 arcolinux-tweak-tool-git
@@ -825,7 +825,7 @@ volumeicon
 #openbox-themes-pambudi-git
 
 ###lx-applications
-lxappearance
+#lxappearance
 #lxappearance-gtk3
 #lxappearance-obconf
 #lxappearance-obconf-gtk3
@@ -837,20 +837,20 @@ lxappearance
 
 ### xfce4 group content
 # https://www.archlinux.org/groups/x86_64/xfce4/
-exo
-garcon
+exo #required by thunar
+#garcon
 thunar
 thunar-volman
 tumbler
-xfce4-appfinder
-xfce4-panel
+#xfce4-appfinder
+#xfce4-panel
 xfce4-power-manager
 #xfce4-session
-xfce4-settings
+#xfce4-settings
 #xfce4-terminal
-xfconf
+xfconf #required by thunar
 #xfdesktop
-xfwm4
+#xfwm4
 #xfwm4-themes
 
 ### xfce4-goodies group content

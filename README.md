@@ -1,3 +1,6 @@
+for custom configs, things put into the Downloads folder by the personal alias are just there for the script (also in Downloads) to copy to the root user
+that script will also make the suckless things (dwm, st, and slstatus), probably needs to be run with sudo
+
 # ArcoLinux BYOI dwm desktop
 
 # Get your code to build your own iso
