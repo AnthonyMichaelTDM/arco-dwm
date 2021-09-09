@@ -8,7 +8,7 @@ CONFIG_DIRECTORY="/home/${USER}/Downloads/" #for end user: change this to be the
 readonly CONFIG_DIRECTORY
 
 CURSOR_SOURCE="/home/${USER}/.icons/BloodMoon-Cursor/"
-CURSOR_TARGET="/usr/share/.icons/"
+CURSOR_TARGET="/usr/share/icons/"
 readonly CURSOR_SOURCE
 readonly CURSOR_TARGET
 
@@ -132,7 +132,7 @@ echo "done"
 echo "setting SDDM theme to copied theme"
 #replace the lines that set current sddm config, and the cursor theme, with my sddm and cursor themes  
 sudo sed -i 's/Current=/ # Current=/' $SDDM_CONF
-sudo sed -i 's/CursorTheme=/CursorTheme=BloodMoon-Cursor\nCurrent=BloodMoon-sugar-candy # /' $SDDM_CONF
+sudo sed -i 's/CursorTheme=/CursorTheme=BloodMoon-Cursor\nCurrent=BloodMoon-sugar-candy\n# /' $SDDM_CONF
 echo "done"
 
 echo "- copying background image"
@@ -140,8 +140,8 @@ sudo cp -f $BACKGROUND_IMAGE_SOURCE $BACKGROUND_IMAGE_TARGET
 echo "done"
 
 echo "setting GTK and Cursor themes to my custom themes"
-sed -i 's/gtk-theme-name=/gtk-theme-name=BloodMoon\n # /' $GTK3_SETTINGS
-sed -i 's/gtk-cursor-theme-name=/gtk-cursor-theme-name=BloodMoon-Cursor\n # /' $GTK3_SETTINGS
+sed -i 's/gtk-theme-name=/gtk-theme-name=BloodMoon\n# /' $GTK3_SETTINGS
+sed -i 's/gtk-cursor-theme-name=/gtk-cursor-theme-name=BloodMoon-Cursor\n# /' $GTK3_SETTINGS
 echo "done"
 
 ## run make on the suckless utilities
