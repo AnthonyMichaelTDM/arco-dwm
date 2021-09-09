@@ -837,7 +837,7 @@ volumeicon
 
 ### xfce4 group content
 # https://www.archlinux.org/groups/x86_64/xfce4/
-exo #required by thunar
+# exo #required by thunar
 #garcon
 thunar
 thunar-volman
@@ -848,7 +848,7 @@ xfce4-power-manager
 #xfce4-session
 #xfce4-settings
 #xfce4-terminal
-xfconf #required by thunar
+# xfconf #required by thunar
 #xfdesktop
 #xfwm4
 #xfwm4-themes
