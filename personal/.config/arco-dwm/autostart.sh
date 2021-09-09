@@ -30,7 +30,7 @@ run slstatus &
 sxhkd -c ~/.config/arco-dwm/sxhkd/sxhkdrc &
 #run "nitrogen --restore"
 #you can set wallpapers in themes as well
-feh --bg-fill /usr/share/backgrounds/arcolinux/BloodMoon.jpg &
+feh --bg-fill /usr/share/backgrounds/arcolinux/bloodmoon.jpg &
 
 #run applications from startup
 run "slimbookbattery"
