@@ -29,12 +29,12 @@ echo
 	desktop="dwm"
 	dmDesktop="dwm"
 
-	arcolinuxVersion='v21.09.11'
+	arcolinuxVersion='v22.01.10'
 
 	isoLabel='arcolinuxb-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 58-1"
+	archisoRequiredVersion="archiso 59-1"
 	buildFolder=$HOME"/arcolinuxb-build"
 	outFolder=$HOME"/ArcoLinuxB-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
