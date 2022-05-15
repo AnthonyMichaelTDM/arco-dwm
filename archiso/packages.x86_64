@@ -424,6 +424,7 @@ xapp
 #xdo
 #xdotool
 xdg-desktop-portal-gtk
+#yt-dlp
 #youtube-dl
 yt-dlp
 zenity
