@@ -29,15 +29,23 @@ echo
 	desktop="dwm"
 	dmDesktop="dwm"
 
-	arcolinuxVersion='v21.09.11'
+	arcolinuxVersion='v22.06.07'
 
 	isoLabel='arcolinuxb-'$desktop'-'$arcolinuxVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	archisoRequiredVersion="archiso 58-1"
+	archisoRequiredVersion="archiso 63-2"
 	buildFolder=$HOME"/arcolinuxb-build"
 	outFolder=$HOME"/ArcoLinuxB-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
+	
+	# If you are ready to use your personal repo and personal packages
+	# https://arcolinux.com/use-our-knowledge-and-create-your-own-icon-theme-combo-use-github-to-saveguard-your-work/
+	# 1. set variable personalrepo to true in this file (default:false)
+	# 2. change the file personal-repo to reflect your repo
+	# 3. add your applications to the file packages-personal-repo.x86_64
+
+	personalrepo=false
 
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
@@ -134,6 +142,7 @@ tput setaf 2
 echo "Phase 3 :"
 echo "- Deleting the build folder if one exists"
 echo "- Git clone the latest ArcoLinux-iso from github"
+echo "- Add our own personal repo + add your packages to packages-personal-repo.x86_64"
 tput sgr0
 echo "################################################################## "
 echo
@@ -145,13 +154,25 @@ echo
 	echo
 	git clone https://github.com/arcolinux/arcolinuxl-iso ../work
 	echo
+
+	if [ $personalrepo == true ]; then
+		echo "Adding our own repo to /etc/pacman.conf"
+		printf "\n" | sudo tee -a ../work/archiso/pacman.conf
+		printf "\n" | sudo tee -a ../work/archiso/airootfs/etc/pacman.conf
+		cat personal-repo | sudo tee -a ../work/archiso/pacman.conf
+		cat personal-repo | sudo tee -a ../work/archiso/airootfs/etc/pacman.conf
+	fi
+
+	echo
 	echo "Adding the content of the /personal folder"
 	echo
 	cp -rf ../personal/ ../work/archiso/airootfs/
+
 	if test -f ../work/archiso/airootfs/personal/.gitkeep ; then
-		echo ".gitkeep is now removed"
 		echo
 		rm ../work/archiso/airootfs/personal/.gitkeep
+		echo ".gitkeep is now removed"
+		echo
     fi
 	echo "Copying the Archiso folder to build work"
 	echo
@@ -167,6 +188,7 @@ echo "- Deleting any files in /etc/skel"
 echo "- Getting the last version of bashrc in /etc/skel"
 echo "- Removing the old packages.x86_64 file from build folder"
 echo "- Copying the new packages.x86_64 file to the build folder"
+echo "- Adding packages from your personal repository - packages-personal-repo.x86_64"
 echo "- Changing group for polkit folder"
 tput sgr0
 echo "################################################################## "
@@ -182,9 +204,18 @@ echo
 
 	echo "Removing the old packages.x86_64 file from build folder"
 	rm $buildFolder/archiso/packages.x86_64
+	rm $buildFolder/archiso/packages-personal-repo.x86_64
 	echo
 	echo "Copying the new packages.x86_64 file to the build folder"
 	cp -f ../archiso/packages.x86_64 $buildFolder/archiso/packages.x86_64
+	echo
+	
+	if [ $personalrepo == true ]; then
+		echo "Adding packages from your personal repository - packages-personal-repo.x86_64"
+		printf "\n" | sudo tee -a $buildFolder/archiso/packages.x86_64
+		cat ../archiso/packages-personal-repo.x86_64 | sudo tee -a $buildFolder/archiso/packages.x86_64
+	fi
+
 	echo
 	echo "Changing group for polkit folder"
 	sudo chgrp polkitd $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
